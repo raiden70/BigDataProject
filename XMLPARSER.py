@@ -10,3 +10,12 @@ class XMLParser:
         dom = ET.parse(filename)
         root = dom.getroot()
         print(root.text)
+    def parseList(self):
+        t=[]
+        for i in range(0,len(self.file_names)):
+            dom = ET.parse(self.directory+"\\"+self.file_names[i])
+            root = dom.getroot()
+            s=str(root.text)
+            t.append(s)
+        return t
+
