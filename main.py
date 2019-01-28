@@ -25,7 +25,7 @@ print(d)
 
 
 import numpy as np
-X = np.array([[-1, -1], [-2, -1], [1, 1], [2, 1]])
+X = np.array([[-1, -1,0,12], [-2, -1,23,23], [1, 1,12,1212], [2, 1,0,12]])
 y = np.array([1, 1, 2, 2])
 from sklearn.svm import SVC
 clf = SVC(gamma='auto')
@@ -33,5 +33,6 @@ clf.fit(X, y)
 
 
 
-
+clf.train()
+clf.test()
 print(clf.predict([[2.1, 2]]))
